@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content" style="float:center">
+        <h1>Traditional Chinese Medicine Herb analysis</h1>
+        <form >
+            <p>Upload your analysis result</p>
+            <input type="file" name="file" id="file">
+            <input type="submit" value="Submit">
+        </form>
+        <div id="result_segmentation">
+            <p>分割結果</p>
+            <img src="/static/image/GanCao.png"> <!--甘草-->
+            <img src="/static/image/ChuanXiong.png"> <!--川芎-->
+            <img src="/static/image/FangFeng.png"> <!--防風-->
+        </div>
+        <div id="result_classification">
+            <p>分類結果</p>
+            <div>
+                <img src="{{data.path_img0}}">
+                <p>甘草: {{data.prob0_0}}%</p>
+                <p>川芎: {{data.prob0_1}}%</p>
+                <p>防風: {{data.prob0_2}}%</p>
+            </div>
+            <div>
+                <img src="{{data.path_img1}}">
+                <p>甘草: {{data.prob1_0}}%</p>
+                <p>川芎: {{data.prob1_1}}%</p>
+                <p>防風: {{data.prob1_2}}%</p>
+            </div>
+            <div>
+                <img src="{{data.path_img2}}">
+                <p>甘草: {{data.prob2_0}}%</p>
+                <p>川芎: {{data.prob2_1}}%</p>
+                <p>防風: {{data.prob2_2}}%</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
